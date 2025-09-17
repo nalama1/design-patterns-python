@@ -7,6 +7,7 @@ class FactoryMethodClient:
         chess_board = ChessBoard(chess_players)
         chess_board.initialize()
         print(f"Los jugadores son: {chess_players} ")
+        print(f"rama main ")
 
 
 if __name__== "__main__":
