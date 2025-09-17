@@ -6,7 +6,7 @@ class FactoryMethodClient:
         chess_players = ["Ana", "Pedro"]
         chess_board = ChessBoard(chess_players)
         chess_board.initialize()
-        print("prueba")
+        print(f"Los jugadores son: {chess_players} ")
 
 
 if __name__== "__main__":
