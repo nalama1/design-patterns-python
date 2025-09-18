@@ -6,4 +6,4 @@ class ChessGame(Game):
         self.player_two = player_two
 
     def start(self):
-        print("Juego de ajedrez")
+        print(f"Jugadores {self.player_one} y {self.player_two} comienza juego de ajedrez")
