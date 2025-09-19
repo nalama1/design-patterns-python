@@ -20,6 +20,7 @@ class FactoryMethodClient:
         solitaire_board = SolitaireBoard(solitaire_player, difficulty="hard")
         solitaire_board.initialize()
         print("Dificultad de juego Solitario: ", solitaire_board.difficulty)
+        print("Movimientos máximos: ", solitaire_board.max_moves)
 
 if __name__== "__main__":
     FactoryMethodClient.main()

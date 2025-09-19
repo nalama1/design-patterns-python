@@ -4,7 +4,7 @@ from .Board import Board
 
 class SolitaireBoard(Board):
 
-    def __init__(self, players: list[str], difficulty = "normal"):
+    def __init__(self, players: list[str], difficulty = "normal", max_moves = 1000):
         super().__init__(players)
         self.name_file = __file__
         self.name_base = os.path.basename(self.name_file)
@@ -12,6 +12,8 @@ class SolitaireBoard(Board):
 
         #inicialización propia de SolitaireBoard
         self.difficulty = difficulty
+        self.max_moves= max_moves
+
 
     def create_game(self):
         players = self.get_players()
