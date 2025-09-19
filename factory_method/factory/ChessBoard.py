@@ -1,9 +1,13 @@
+import os
 from .Board import Board
 from factory_method.products.ChessGame import ChessGame
 
 class ChessBoard(Board):
     def __init__(self, players):
         super().__init__(players)
+        self.name_file = __file__
+        self.name_base = os.path.basename(self.name_file)
+        print(f"[{self.name_base}]")
 
     def create_game(self):
         players = self.get_players()

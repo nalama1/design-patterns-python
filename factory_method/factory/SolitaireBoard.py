@@ -1,3 +1,4 @@
+import os
 from factory_method.products.SolitaireGame import SolitaireGame
 from .Board import Board
 
@@ -5,6 +6,9 @@ class SolitaireBoard(Board):
 
     def __init__(self, players: list[str], difficulty = "normal"):
         super().__init__(players)
+        self.name_file = __file__
+        self.name_base = os.path.basename(self.name_file)
+        print(f"[{self.name_base}]")
 
         #inicialización propia de SolitaireBoard
         self.difficulty = difficulty
