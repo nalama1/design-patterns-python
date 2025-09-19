@@ -16,3 +16,5 @@ class ChessBoard(Board):
 
         game = ChessGame(player_one, player_two)
         return game
+
+    """ creador concreto: ChessBoard"""

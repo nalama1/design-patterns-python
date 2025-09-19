@@ -7,4 +7,4 @@ class SolitaireGame(Game):
     def start(self):
         print(f"Jugador {self.player} comienza juego de cartas Solitario")
 
-    """ producto concreto"""
+    """ producto concreto: SolitaireGame"""

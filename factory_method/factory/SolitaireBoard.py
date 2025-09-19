@@ -18,4 +18,6 @@ class SolitaireBoard(Board):
 
         game = SolitaireGame(player)
         return game
+
+    """ creador concreto: SolitaireBoard"""
         

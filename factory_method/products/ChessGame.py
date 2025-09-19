@@ -7,3 +7,5 @@ class ChessGame(Game):
 
     def start(self):
         print(f"Jugadores {self.player_one} y {self.player_two} comienza juego de ajedrez")
+
+    """ producto concreto: ChessGame"""
