@@ -12,8 +12,10 @@ class FactoryMethodClient:
     @staticmethod
     def main():
         chess_players = ["Ana Castle", "Pedro Rock"]
-        chess_board = ChessBoard(chess_players)
+        chess_board = ChessBoard(chess_players, time_per_player=15)
         chess_board.initialize()
+        print("Tiempo por jugador:", chess_board.time_per_player, "minutos.")
+        print("Turno inicial: ", chess_board.turn)
         print(f"---------------- ")
 
         solitaire_player = ["María Antonieta"]
