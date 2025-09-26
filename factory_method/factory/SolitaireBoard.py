@@ -1,6 +1,7 @@
 import os
 from factory_method.products.SolitaireGame import SolitaireGame
 from .Board import Board
+from factory_method.factory.Logger import Logger
 
 class SolitaireBoard(Board):
 
@@ -23,6 +24,10 @@ class SolitaireBoard(Board):
             player = players[0]
 
         game = SolitaireGame(player)
+
+        logger = Logger()
+        logger.log(f"Se creó un juego de Solitario con jugador: {player}")
+
         return game
 
     """ creador concreto: SolitaireBoard"""

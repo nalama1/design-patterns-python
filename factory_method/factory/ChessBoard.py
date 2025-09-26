@@ -1,6 +1,7 @@
 import os
 from .Board import Board
 from factory_method.products.ChessGame import ChessGame
+from factory_method.factory.Logger import Logger
 
 class ChessBoard(Board):
     def __init__(self, players, time_per_player = 10):
@@ -23,6 +24,11 @@ class ChessBoard(Board):
             player_two = players[1]
 
         game = ChessGame(player_one, player_two, self.time_per_player)
+
+        #Logger
+        logger = Logger()
+        logger.log(f"Se creó un juego de ajedrez con jugadores: {player_one} y {player_two}")
+
         return game
 
     """ creador concreto: ChessBoard"""
