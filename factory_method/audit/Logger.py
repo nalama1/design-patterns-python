@@ -6,7 +6,7 @@ class Logger:
         base_dir = os.path.dirname(os.path.dirname(__file__))
         audit_dir = os.path.join(base_dir, "audit")
         os.makedirs(audit_dir, exist_ok=True)
-        self.logfile = os.path.join(audit_dir, "factory_logs.txt")
+        self.logfile = os.path.join(audit_dir, "factory_log.txt")
 
         # os.makedirs("audit", exist_ok=True)
         # self.logfile = os.path.join("audit", "factory_logs.txt")
