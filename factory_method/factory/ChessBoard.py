@@ -1,7 +1,7 @@
 import os
 from .Board import Board
 from factory_method.products.ChessGame import ChessGame
-from factory_method.factory.Logger import Logger
+from factory_method.audit.Logger import Logger
 
 class ChessBoard(Board):
     def __init__(self, players, time_per_player = 10):
