@@ -1,7 +1,7 @@
 import os
 from factory_method.products.SolitaireGame import SolitaireGame
 from .Board import Board
-from factory_method.factory.Logger import Logger
+from factory_method.audit.Logger import Logger
 
 class SolitaireBoard(Board):
 
