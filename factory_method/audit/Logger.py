@@ -8,10 +8,6 @@ class Logger:
         os.makedirs(audit_dir, exist_ok=True)
         self.logfile = os.path.join(audit_dir, "factory_log.txt")
 
-        # os.makedirs("audit", exist_ok=True)
-        # self.logfile = os.path.join("audit", "factory_logs.txt")
-
-
     def log(self, message:str):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with open(self.logfile, "a", encoding="utf-8") as f:
