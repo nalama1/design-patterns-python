@@ -214,3 +214,7 @@ __pycache__/
 
 # Archivos de log generados
 *.log
+
+# Archivos txt 
+*.txt
+
