@@ -215,6 +215,8 @@ __pycache__/
 # Archivos de log generados
 *.log
 
-# Archivos txt 
-*.txt
+
+# Ignorar archivos de log
+factory_method/audit/factory_log.txt
+factory_method/audit/*.txt
 
