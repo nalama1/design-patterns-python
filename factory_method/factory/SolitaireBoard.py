@@ -14,6 +14,10 @@ class SolitaireBoard(Board):
         #inicialización propia de SolitaireBoard
         self.difficulty = difficulty
         self.max_moves= max_moves
+        self.current_score = 0
+        self.remaining_cards = 52
+        self.time_elapsed = 0
+        self.moves_made = []
 
 
     def create_game(self):

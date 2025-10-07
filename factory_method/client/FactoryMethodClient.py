@@ -23,6 +23,10 @@ class FactoryMethodClient:
         solitaire_board.initialize()
         print("Dificultad de juego Solitario: ", solitaire_board.difficulty)
         print("Movimientos máximos: ", solitaire_board.max_moves)
+        print("Puntaje actual: ", solitaire_board.current_score)
+        print("Movimientos realizados: ", solitaire_board.moves_made)
+        print("Cartas restantes: ", solitaire_board.remaining_cards)
+        print("Tiempo transcurrido: ", solitaire_board.time_elapsed)
 
 if __name__== "__main__":
     FactoryMethodClient.main()
