@@ -28,5 +28,7 @@ class FactoryMethodClient:
         print("Cartas restantes: ", solitaire_board.remaining_cards)
         print("Tiempo transcurrido: ", solitaire_board.time_elapsed)
 
+
+
 if __name__== "__main__":
     FactoryMethodClient.main()
