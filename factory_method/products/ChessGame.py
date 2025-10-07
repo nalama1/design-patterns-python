@@ -12,11 +12,6 @@ class ChessGame(Game):
         self.name_base = os.path.basename(self.name_file)
         self.time_per_player = time_per_player
 
-        #Regitrar en el Log
-        logger = Logger()
-        logger.log(f"")
-
-
 
     def start(self):
         print(f"[{self.name_base}] Jugadores {self.player_one} y {self.player_two} comienza juego de ajedrez")
