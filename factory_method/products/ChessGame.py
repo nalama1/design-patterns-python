@@ -1,5 +1,7 @@
 import os
 from .Game import Game
+from ..audit.Logger import Logger
+
 
 class ChessGame(Game):
 

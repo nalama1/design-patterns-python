@@ -13,6 +13,10 @@ class ChessBoard(Board):
         #inicialización propia de ChessBoard
         self.time_per_player = time_per_player
         self.turn = "white"
+        self.move_history = []
+        self.captured_pieces = []
+        self.is_check = False
+        self.is_checkmate = False
 
     def create_game(self):
         players = self.get_players()
@@ -24,6 +28,9 @@ class ChessBoard(Board):
             player_two = players[1]
 
         game = ChessGame(player_one, player_two, self.time_per_player)
+        game.turn = self.turn
+        game.move_history = self.move_history
+        game.captured_pieces = self.captured_pieces
 
         #Logger
         logger = Logger()

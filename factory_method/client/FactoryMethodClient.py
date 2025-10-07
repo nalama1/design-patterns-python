@@ -16,6 +16,10 @@ class FactoryMethodClient:
         chess_board.initialize()
         print("Tiempo por jugador:", chess_board.time_per_player, "minutos.")
         print("Turno inicial: ", chess_board.turn)
+        print("Jugadas realizadas: ", chess_board.move_history)
+        print("Piezas capturadas: ", chess_board.captured_pieces)
+        print("Rey en jaque mate: ", "Si" if chess_board.is_check else "No")
+        print("Jaque mate: ", "Si" if chess_board.is_checkmate else "No")
         print(f"---------------- ")
 
         solitaire_player = ["María Antonieta"]
@@ -27,6 +31,8 @@ class FactoryMethodClient:
         print("Movimientos realizados: ", solitaire_board.moves_made)
         print("Cartas restantes: ", solitaire_board.remaining_cards)
         print("Tiempo transcurrido: ", solitaire_board.time_elapsed)
+
+
 
 if __name__== "__main__":
     FactoryMethodClient.main()
