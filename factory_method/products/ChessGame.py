@@ -1,5 +1,7 @@
 import os
 from .Game import Game
+from ..audit.Logger import Logger
+
 
 class ChessGame(Game):
 
@@ -9,6 +11,11 @@ class ChessGame(Game):
         self.name_file = __file__
         self.name_base = os.path.basename(self.name_file)
         self.time_per_player = time_per_player
+
+        #Regitrar en el Log
+        logger = Logger()
+        logger.log(f"")
+
 
 
     def start(self):

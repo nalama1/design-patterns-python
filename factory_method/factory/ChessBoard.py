@@ -28,6 +28,9 @@ class ChessBoard(Board):
             player_two = players[1]
 
         game = ChessGame(player_one, player_two, self.time_per_player)
+        game.turn = self.turn
+        game.move_history = self.move_history
+        game.captured_pieces = self.captured_pieces
 
         #Logger
         logger = Logger()
