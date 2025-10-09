@@ -10,7 +10,7 @@ class ChessBoard(Board):
         self.name_base = os.path.basename(self.name_file)
         print(f"[{self.name_base}]")
 
-        #inicialización propia de ChessBoard
+        #ChessBoard specific initialization
         self.time_per_player = time_per_player
         self.turn = "white"
         self.move_history = []
@@ -20,8 +20,8 @@ class ChessBoard(Board):
 
     def create_game(self):
         players = self.get_players()
-        player_one = "Blanco"
-        player_two = "Negro"
+        player_one = "White"
+        player_two = "Black"
 
         if players is not None and len(players) == 2:
             player_one = players[0]
@@ -34,8 +34,8 @@ class ChessBoard(Board):
 
         #Logger
         logger = Logger()
-        logger.log(f"Se creó un juego de ajedrez con jugadores: {player_one} y {player_two}")
+        logger.log(f"A chess game with players was created: {player_one} y {player_two}")
 
         return game
 
-    """ creador concreto: ChessBoard"""
+    """ Concrete creator: ChessBoard"""
