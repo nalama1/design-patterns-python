@@ -11,7 +11,7 @@ class SolitaireBoard(Board):
         self.name_base = os.path.basename(self.name_file)
         print(f"[{self.name_base}]")
 
-        #inicialización propia de SolitaireBoard
+        #SolitaireBoard specific initialization
         self.difficulty = difficulty
         self.max_moves= max_moves
         self.current_score = 0
@@ -22,7 +22,7 @@ class SolitaireBoard(Board):
 
     def create_game(self):
         players = self.get_players()
-        player = "Jugador"
+        player = "Player"
 
         if self._players is not None and len(self._players) > 0:
             player = players[0]
@@ -30,9 +30,9 @@ class SolitaireBoard(Board):
         game = SolitaireGame(player)
 
         logger = Logger()
-        logger.log(f"Se creó un juego de Solitario con jugador: {player}")
+        logger.log(f"A Solitaire game with a player was created: {player}")
 
         return game
 
-    """ creador concreto: SolitaireBoard"""
+    """ Concrete creator: SolitaireBoard"""
         

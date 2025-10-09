@@ -11,14 +11,14 @@ class SolitaireGame(Game):
         self.name_base = os.path.basename(self.name_file)
         self.start_time = datetime.datetime.now()
         self.score = 0
-        self.status = "En curso"
+        self.status = "In progress"
 
-        # Registrar en el log
+        # Record in the log
         logger = Logger()
-        logger.log(f"Juego iniciado por {self.player} en {self.name_base} a las {self.start_time}")
+        logger.log(f"Game started by {self.player} in {self.name_base} at {self.start_time}")
 
 
     def start(self):
-        print(f"[{self.name_base}] Jugador {self.player} comienza juego de cartas Solitario")
+        print(f"[{self.name_base}] Player {self.player} starts Solitaire card game")
 
-    """ producto concreto: SolitaireGame"""
+    """ Concrete product: SolitaireGame"""

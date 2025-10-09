@@ -6,7 +6,7 @@ from factory_method.factory.SolitaireBoard import SolitaireBoard
 class FactoryMethodClient:
     name_file = sys.argv[0]
     name_base = os.path.basename(name_file)
-    print(f"Inicia ejecución desde:")
+    print(f"Execution starts from:")
     print({name_base})
 
     @staticmethod
@@ -14,12 +14,12 @@ class FactoryMethodClient:
         chess_players = ["Ana Castle", "Pedro Rock"]
         chess_board = ChessBoard(chess_players, time_per_player=15)
         chess_board.initialize()
-        print("Timer per player:", chess_board.time_per_player, "minutos.")
+        print("Timer per player:", chess_board.time_per_player, "minutes.")
         print("Initial turn: ", chess_board.turn)
         print("Moves made: ", chess_board.move_history)
         print("Captured pieces: ", chess_board.captured_pieces)
-        print("King in check: ", "Si" if chess_board.is_check else "No")
-        print("Checkmate: ", "Si" if chess_board.is_checkmate else "No")
+        print("King in check: ", "Yes" if chess_board.is_check else "No")
+        print("Checkmate: ", "Yes" if chess_board.is_checkmate else "No")
         print(f"---------------- ")
 
         solitaire_player = ["María Antonieta"]
