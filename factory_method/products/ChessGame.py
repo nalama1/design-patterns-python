@@ -12,7 +12,7 @@ class ChessGame(Game):
 
 
     def start(self):
-        print(f"[{self.name_base}] Jugadores {self.player_one} y {self.player_two} comienza juego de ajedrez")
-        print(f"Partida de ajedrez iniciada entre {self.player_one}(blancas) y {self.player_two}(negras)")
+        print(f"[{self.name_base}] Players {self.player_one} and {self.player_two} start chess game")
+        print(f"Chess match started between {self.player_one}(White) and {self.player_two}(Black)")
 
-    """ producto concreto"""
+    """ Concrete product: ChessGame"""
