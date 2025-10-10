@@ -1,7 +1,5 @@
 import os
 from .Game import Game
-from ..audit.Logger import Logger
-
 
 class ChessGame(Game):
 
@@ -17,4 +15,4 @@ class ChessGame(Game):
         print(f"[{self.name_base}] Jugadores {self.player_one} y {self.player_two} comienza juego de ajedrez")
         print(f"Partida de ajedrez iniciada entre {self.player_one}(blancas) y {self.player_two}(negras)")
 
-    """ producto concreto: ChessGame"""
+    """ producto concreto"""

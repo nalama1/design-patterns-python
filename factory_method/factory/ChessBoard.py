@@ -38,4 +38,4 @@ class ChessBoard(Board):
 
         return game
 
-    """ creador concreto: ChessBoard"""
+    """ creador concreto"""

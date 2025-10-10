@@ -34,5 +34,5 @@ class SolitaireBoard(Board):
 
         return game
 
-    """ creador concreto: SolitaireBoard"""
+    """ creador concreto"""
         
