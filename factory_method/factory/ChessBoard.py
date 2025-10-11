@@ -38,4 +38,4 @@ class ChessBoard(Board):
 
         return game
 
-    """ Concrete creator: ChessBoard"""
+# Concrete creator: ChessBoard

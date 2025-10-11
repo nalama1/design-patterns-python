@@ -21,4 +21,4 @@ class Board(ABC):
     def get_players(self):
         return self._players
 
-    """ Control Panel: Board"""
+# Control Panel: Board
