@@ -5,8 +5,8 @@ from ..audit.Logger import Logger
 
 
 class SolitaireGame(Game):
-    """ Representa una implementación concreta de un juego de Solitario.
-        Hereda de la clase abstracta/interfaz Game y registra eventos.
+    """ Represents a concrete implementation of a Solitaire game.
+        Inherits from the abstract class/interface game and logs events.
     """
     def __init__(self, player:str):
         self.player = player
@@ -14,29 +14,30 @@ class SolitaireGame(Game):
         self.name_base = os.path.basename(self.name_file)
         self.start_time: datetime.datetime = datetime.datetime.now()
 
-        # Atributos de estado
+        # State attributes
         self.score: int = 0
-        self.status = "No iniciado"
+        self.status: str = "In progress"
 
-        # Inicialización de Logger
+        # Logger initialization
         self._logger = Logger()
 
-        # Registro inicial
-        self._logger.log(f"Game started by {self.player} in {self.name_base} at {self.start_time}")
-
+        # Initial log entry
+        self._logger.log(
+            f"Game started by {self.player} in {self.name_base} at {self.start_time}"
+        )
 
     def start(self) -> None:
-        """ Inicia el juego, actualiza el estado y registra el evento"""
-        self.status = "En curso"
+        """ Starts the game, updates the status, and logs the event."""
+        self.status = "In Progress"
         self.start_time = datetime.datetime.now()
 
         print("-" * 40)
-        print(f" El juego de Solitario ha comenzado")
-        print(f"Jugador: {self.player}")
+        print(f"Solitaire game has begun!")
+        print(f"Player: {self.player}")
         print("-" * 40)
 
         self._logger.log(
-            f"Juego de Solitario INICIADO por {self.player}. Tiempo: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}")
-
+            f"Solitaire Game STARTED by {self.player}. Time: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')} "
+        )
 
 # Concrete product: SolitaireGame

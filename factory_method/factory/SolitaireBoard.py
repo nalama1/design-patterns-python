@@ -34,5 +34,5 @@ class SolitaireBoard(Board):
 
         return game
 
-    """ Concrete creator: SolitaireBoard"""
+# Concrete creator: SolitaireBoard
         
