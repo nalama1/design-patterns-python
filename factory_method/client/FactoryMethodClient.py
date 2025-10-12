@@ -32,7 +32,7 @@ class FactoryMethodClient:
         print("Remaining cards: ", solitaire_board.remaining_cards)
         print("Time elapsed: ", solitaire_board.time_elapsed)
 
-
+#prueba main
 
 if __name__== "__main__":
     FactoryMethodClient.main()
