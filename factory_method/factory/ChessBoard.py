@@ -45,3 +45,4 @@ class ChessBoard(Board):
         return game
 
 # Concrete creator: ChessBoard
+# Protected branch
