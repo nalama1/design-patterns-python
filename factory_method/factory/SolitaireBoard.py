@@ -1,9 +1,9 @@
 import os
 from typing import List, Optional
 
+from factory_method.factory.Board import Board
 from factory_method.products.SolitaireGame import SolitaireGame
 from factory_method.audit.Logger import Logger
-from .Board import Board
 
 class SolitaireBoard(Board):
     """
@@ -13,11 +13,11 @@ class SolitaireBoard(Board):
 
     def __init__(
             self,
-            players: List[str],
+            players: Optional[List[str]] = None,
             difficulty:str = "normal",
             max_moves:int = 1000,
             logger: Optional[Logger]=None
-    ):
+    ) -> None:
         super().__init__(players)
 
         self.name_file = __file__
@@ -33,9 +33,9 @@ class SolitaireBoard(Board):
 
         # Inyection Dependency (DIP)
         self.logger = logger or Logger()
-
-        # Initialization Log
-        self.logger.log(f"[INIT] Board initialized: {self.name_base}, difficulty={self.difficulty}")
+        self.logger.log(
+            f"[INIT] Solitaire Board initialized: {self.name_base}, difficulty={self.difficulty}"
+        )
 
 
     def create_game(self)  -> SolitaireGame:
