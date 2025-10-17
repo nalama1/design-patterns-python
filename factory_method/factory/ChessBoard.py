@@ -55,7 +55,14 @@ class ChessBoard(Board):
         player_two = players[1] if len(players) > 1 else self.PLAYER_TWO_COLOR
 
         try:
-            game = ChessGame(player_one, player_two, self.time_per_player)
+            game = ChessGame(
+                player_one = player_one,
+                player_two = player_two,
+                time_per_player = self.time_per_player,
+                player_one_color = self.PLAYER_ONE_COLOR,
+                player_two_color = self.PLAYER_TWO_COLOR,
+                logger=self.logger
+            )
 
             # Configure game state
             game.turn = self.turn

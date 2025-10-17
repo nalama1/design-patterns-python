@@ -1,5 +1,8 @@
 import os
-from .Game import Game
+from typing import List, Optional
+
+from  factory_method.products.Game import Game
+from factory_method.audit.Logger import Logger
 
 class ChessGame(Game):
     """
@@ -7,24 +10,60 @@ class ChessGame(Game):
     Inherits from the abstract class/interface Game.
     """
 
-    # Constantes
-    PLAYER_ONE_COLOR = "White"
-    PLAYER_TWO_COLOR = "Black"
+    def __init__(
+            self,
+            player_one: str,
+            player_two: str,
+            time_per_player: int,
+            player_one_color: str,
+            player_two_color: str,
+            logger: Optional[Logger] = None,
+            turn: str = "White",
+            move_history: Optional[List[str]] = None,
+            captured_pieces: Optional[List[str]] = None
+    ) -> None:
 
-    def __init__(self, player_one, player_two, time_per_player):
+        super().__init__()
+
         self.player_one = player_one
         self.player_two = player_two
-        self.name_file = __file__
-        self.name_base = os.path.basename(self.name_file)
         self.time_per_player = time_per_player
 
-    def start(self):
-        print("-" * 30)
-        print(f" Chess Game Started!")
-        print(f"Participants: {self.player_one} ({self.PLAYER_ONE_COLOR}) vs {self.player_two} ({self.PLAYER_TWO_COLOR}) ")
-        print(f"Time per player: {self.time_per_player} minutes.")
-        print(f"[{self.name_base}] Players {self.player_one} and {self.player_two} start chess game")
-        print(f"Chess match started between {self.player_one}({self.PLAYER_ONE_COLOR}) and {self.player_two}({self.PLAYER_TWO_COLOR})")
-        print("-" * 30)
+        # We save the colors obtained from the Board
+        self.player_one_color = player_one_color
+        self.player_two_color = player_two_color
+
+        #Game state
+        self.turn = turn
+        self.move_history: List[str] = move_history or []
+        self.captured_pieces: List[str] = captured_pieces or []
+
+        #File/Class Attributes
+        self.name_file = __file__
+        self.name_base = os.path.basename(self.name_file)
+
+        #Dependency Injection for the Logger
+        self.logger = logger or Logger()
+        self.logger.log(f"[INIT] ChessGame initialized for player.")
+
+    def start(self) -> None:
+        """
+        Implements the abstract start method from the base Game class.
+        Starts the game and logs the event.
+        """
+        message = (
+            "-" * 40 + "\n"
+            f" Chess Game Started ({self.name_base})\n"
+            f" Participants: {self.player_one} ({self.player_one_color}) vs {self.player_two} ({self.player_two_color})\n"
+            f" Time per player: {self.time_per_player} minutes.\n" +
+            "-" * 40
+        )
+
+        print(message)
+
+        self.logger.log(
+            f"[START] Chess match started: {self.player_one} ({self.player_one_color})"
+            f"vs {self.player_two} ({self.player_two_color})"
+        )
 
 # Concrete product: ChessGame
