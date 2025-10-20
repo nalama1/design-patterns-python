@@ -1,9 +1,11 @@
 import os
 import datetime
 from typing import Optional
+from factory_method.audit.ILogger import ILogger
 
-class Logger:
+class Logger(ILogger):
     """
+    Default implementation of ILogger.
     Class responsible for logging events to a log file.
     Automatically creates the 'audit' folder if it does not exist
     """
