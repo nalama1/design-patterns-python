@@ -3,6 +3,7 @@ from typing import List, Optional
 
 from factory_method.factory.Board import Board
 from factory_method.products.SolitaireGame import SolitaireGame
+from factory_method.audit.ILogger import ILogger
 from factory_method.audit.Logger import Logger
 
 class SolitaireBoard(Board):
@@ -16,7 +17,7 @@ class SolitaireBoard(Board):
             players: Optional[List[str]] = None,
             difficulty:str = "normal",
             max_moves:int = 1000,
-            logger: Optional[Logger]=None
+            logger: Optional[ILogger]=None
     ) -> None:
         super().__init__(players)
 
@@ -32,7 +33,7 @@ class SolitaireBoard(Board):
         self.moves_made: List[str] = []
 
         # Inyection Dependency (DIP)
-        self.logger = logger or Logger()
+        self.logger: ILogger = logger or Logger()
         self.logger.log(
             f"[INIT] Solitaire Board initialized: {self.name_base}, difficulty={self.difficulty}"
         )

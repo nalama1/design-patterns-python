@@ -3,6 +3,7 @@ import os
 from typing import  Optional
 
 from .Game import Game
+from factory_method.audit.ILogger import ILogger
 from factory_method.audit.Logger import Logger
 
 
@@ -11,8 +12,12 @@ class SolitaireGame(Game):
         Inherits from the abstract class/interface game and logs events.
     """
 
-    def __init__(self, player:str, logger: Optional[Logger] = None):
-        if not player:
+    def __init__(
+            self,
+            player:str,
+            logger: Optional[ILogger] = None
+    ) -> None:
+        if not player.strip():
             raise ValueError("The player name cannot be empty")
 
         super().__init__()
@@ -25,9 +30,10 @@ class SolitaireGame(Game):
         self.score: int = 0
 
         # Dependency Injection (DIP)
-        self._logger = logger or Logger()
+        self._logger: ILogger = logger or Logger()
         self._logger.log(
-            f"[INIT] Game created for player '{self.player}' in {self.name_base} at {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}"
+            f"[INIT] Game created for player '{self.player}' in {self.name_base}"
+            f" at {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}"
         )
 
     def start(self) -> None:

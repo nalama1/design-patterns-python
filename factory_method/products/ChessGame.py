@@ -2,6 +2,7 @@ import os
 from typing import List, Optional
 
 from  factory_method.products.Game import Game
+from factory_method.audit.ILogger import ILogger
 from factory_method.audit.Logger import Logger
 
 class ChessGame(Game):
@@ -17,7 +18,7 @@ class ChessGame(Game):
             time_per_player: int,
             player_one_color: str,
             player_two_color: str,
-            logger: Optional[Logger] = None,
+            logger: Optional[ILogger] = None,
             turn: str = "White",
             move_history: Optional[List[str]] = None,
             captured_pieces: Optional[List[str]] = None
@@ -43,7 +44,7 @@ class ChessGame(Game):
         self.name_base = os.path.basename(self.name_file)
 
         #Dependency Injection for the Logger
-        self.logger = logger or Logger()
+        self.logger: ILogger = logger or Logger()
         self.logger.log(f"[INIT] ChessGame initialized for player.")
 
     def start(self) -> None:

@@ -3,6 +3,7 @@ from typing import List, Optional
 
 from .Board import Board
 from factory_method.products.ChessGame import ChessGame
+from factory_method.audit.ILogger import ILogger
 from factory_method.audit.Logger import Logger
 
 class ChessBoard(Board):
@@ -19,7 +20,7 @@ class ChessBoard(Board):
             self,
             players: Optional[List[str]] = None,
             time_per_player: int = 10,
-            logger: Optional[Logger] = None,
+            logger: Optional[ILogger] = None,
     ) -> None:
         """
         Initializes an instance of the chest board.
@@ -38,7 +39,7 @@ class ChessBoard(Board):
         self.is_checkmate = False
 
         # Dependency Injection (DIP)
-        self.logger = logger or Logger()
+        self.logger: ILogger = logger or Logger()
 
         # Initial Log
         self.logger.log(

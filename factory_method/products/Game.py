@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Optional
+from factory_method.audit.ILogger import ILogger
 from factory_method.audit.Logger import Logger
 
 class Game(ABC):
@@ -10,14 +11,14 @@ class Game(ABC):
     def __init__(
             self,
             player: Optional[str]= None,
-            logger: Optional[Logger] = None
+            logger: Optional[ILogger] = None
     ) -> None:
         # Common properties for all games
         self.player = player or "Player"
         self.is_started = False
 
-        #Dependency Injection for logging
-        self.logger = logger or Logger()
+        #Dependency Injection for logging - depends on ILogger (abstraction)
+        self.logger: ILogger = logger or Logger()
         self.logger.log(
             f"[INIT] Game base initialized for player: {self.player}"
         )
