@@ -10,15 +10,16 @@ To apply the Factory Method pattern to:
 ## 🏗️ Project Structure
 
 factory_method/
-  * audit/   | Module for logging functionality
+  * audit/   -------- Module for logging functionality
+      * ILogger.py
       * Logger.py
-  * client/  | Main client (entry point)
+  * client/  -------- Main client (entry point)
       * FactoryMethodClient.py
-  * factory/ | Base and concrete Factory classes
+  * factory/ -------- Base and concrete Factory classes
       * Board.py
       * ChessBoard.py
       * SolitaireBoard.py
-  * products/ | Product classes (specific game types)
+  * products/ -------- Product classes (specific game types)
       * ChessGame.py
       * Game.py
       * SolitaireGame.py
@@ -67,10 +68,6 @@ factory_method/
 |20|Git pull --rebase origin main|Download the merge commit (or the rebased commits) that was performed on the remote.|
 |21|Git status|Verify that the working tree is clean.|
 |22|Git branch -d nueva-rama|Delete the nueva-rama branch locally (this only works if the branch has already been merged).|
-
-
-
-
 
 
 
