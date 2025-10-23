@@ -1,4 +1,4 @@
-# 🧩 Factory Method Pattern in Python
+# Factory Method Pattern in Python
 This project implements the Factory Method design pattern in Python, demonstrating how to create objects of various game types (Chess, Solitaire) without tightly coupling the client code to concrete classes.
 
 <img width="848" height="638" alt="image" src="https://github.com/user-attachments/assets/7af07b76-6caf-43d4-bdb3-37e984073cdb" />
@@ -97,6 +97,91 @@ To apply the Factory Method pattern to:
 * __Factory Method:__ Creates objects without exposing the instantiation logic to the client.
 * __Single Responsability Principle (SRP):__ Each module and class has a clear, defined responsibility.
 * __Open/Closed Principle (OCP):__ The system is open for extension (new game types) but closed for modification (client code remains unchanged).
+
+
+ 
+---
+
+## 🚀 Getting Started
+
+These instructions will help you set up and run the project on your local machine.
+
+### 🧩 Prerequisites
+
+Make sure you have the following installed on your system:
+
+* **Python 3.10+** (or your exact project version)
+* **Git** (for cloning the repository)
+* **Poetry** (recommended Python dependency manager).
+  If you don’t have Poetry, install it globally:
+
+```bash
+pip install poetry
+```
+
+---
+
+### ⚙️ Installation & Setup
+
+Follow these steps to set up the environment and install dependencies:
+
+#### 1️⃣ Clone the Repository
+
+Replace the URL with your GitHub project link:
+
+```bash
+git clone [YOUR_GITHUB_REPOSITORY_URL]
+```
+
+#### 2️⃣ Change Directory
+
+```bash
+cd [your-project-folder-name]
+```
+
+#### 3️⃣ Install Dependencies
+
+This command creates a virtual environment and installs all required libraries:
+
+```bash
+poetry install
+```
+
+#### 4️⃣ Activate the Virtual Environment
+
+```bash
+poetry shell
+```
+
+---
+
+### ▶️ Usage
+
+Once the environment is active, run the main client file to see the **Factory Method Pattern** in action:
+
+```bash
+python -m client.FactoryMethodClient
+```
+
+---
+
+
+
+### 🛠️ Built With
+
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Poetry](https://img.shields.io/badge/Poetry-Dependency%20Manager-60A5FA?logo=poetry)](https://python-poetry.org/)
+[![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/)
+[![PyCharm](https://img.shields.io/badge/PyCharm-IDE-000000?logo=pycharm&logoColor=white)](https://www.jetbrains.com/pycharm/)
+[![VS Code](https://img.shields.io/badge/VS%20Code-Editor-007ACC?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
+[![Markdown](https://img.shields.io/badge/Markdown-Docs-000000?logo=markdown)](https://www.markdownguide.org/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
+
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
+
 
 
 ## 📷 Capture images of program from console (Terminal)
