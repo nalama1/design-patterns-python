@@ -1,29 +1,51 @@
 # 🧩 Factory Method Pattern in Python
 This project implements the Factory Method design pattern in Python, demonstrating how to create objects of various game types (Chess, Solitaire) without tightly coupling the client code to concrete classes.
 
+<img width="848" height="638" alt="image" src="https://github.com/user-attachments/assets/7af07b76-6caf-43d4-bdb3-37e984073cdb" />
+
+### Factory Method Pattern
+| To clearly represent the Factory Method pattern with the following classes:									|
+| :--- |
+|  🧍‍♂️ Client (FactoryMethodClient)|                                                                          |
+|  🧱 Abstract factory (Board)|                                                                               |
+|  🧩 Concrete factories (ChessBoard, SolitaireBoard)                                                         |
+|  🎮 Abstract product (Game)                                                                                 |
+|  🕹 Concrete products (ChessGame, SolitaireGame)                                                            |
+|                                                                                                               |
+|   |
+|  💡 **How to interpret it:**                                                                                    |
+|  🧱 **Board** is abstract → it defines the create_game() method but does not implement it.                         |
+|  🧩 **ChessBoard** and **SolitaireBoard** are concrete factories, which return instances of ChessGame or SolitaireGame.|
+|  🎮 **Game** is the abstract base class for all games.|
+|  🧍‍♂️ **FactoryMethodClient** represents the client that initiates the entire process.|
+|     **ILogger** is an interface for logging (implemented by Logger).|
+
+
 ## 🚀 Objective
 To apply the Factory Method pattern to:
 * Create games in a flexible and decoupled manner.
 * Incorporate new functionalities (e.g., new game types) without modifying existing client code.
 * Practice good Git workflow (branching, Pull Requests, rebase, merges, logging).
 
+
 ## 🏗️ Project Structure
 
-factory_method/
-  * audit/   -------- Module for logging functionality
-      * ILogger.py
-      * Logger.py
-  * client/  -------- Main client (entry point)
-      * FactoryMethodClient.py
-  * factory/ -------- Base and concrete Factory classes
-      * Board.py
-      * ChessBoard.py
-      * SolitaireBoard.py
-  * products/ -------- Product classes (specific game types)
-      * ChessGame.py
-      * Game.py
-      * SolitaireGame.py
-  * README.md
+* **factory_method/**
+    * **audit/** (Module for logging functionality)
+        * `ILogger.py`
+        * `Logger.py`
+    * **client/** (Main client / entry point)
+        * `FactoryMethodClient.py`
+    * **factory/** (Base and concrete Factory classes)
+        * `Board.py` (Abstract Factory)
+        * `ChessBoard.py` (Concrete Factory)
+        * `SolitaireBoard.py` (Concrete Factory)
+    * **products/** (Product classes / specific game types)
+        * `ChessGame.py` (Concrete Product)
+        * `Game.py` (Abstract Product)
+        * `SolitaireGame.py` (Concrete Product)
+    * `README.md`
+
 
 ## 🧠 Core Features
     
@@ -75,6 +97,29 @@ factory_method/
 * __Factory Method:__ Creates objects without exposing the instantiation logic to the client.
 * __Single Responsability Principle (SRP):__ Each module and class has a clear, defined responsibility.
 * __Open/Closed Principle (OCP):__ The system is open for extension (new game types) but closed for modification (client code remains unchanged).
+
+
+## 📷 Capture images of program from console (Terminal)
+
+<img width="566" height="279" alt="image" src="https://github.com/user-attachments/assets/db2895e0-87fc-4f43-bd54-4eaac88a700d" />  
+
+**Selecting the option one:**  
+
+<img width="565" height="418" alt="image" src="https://github.com/user-attachments/assets/b24c8e1c-7ed1-45fe-95cc-061d3e95245a" />
+
+**Selecting the option two:**  
+
+<img width="527" height="282" alt="image" src="https://github.com/user-attachments/assets/07186fb8-7fe2-4714-902e-e8168e2d4e07" />
+
+**Selecting the option three:**  
+
+<img width="568" height="659" alt="image" src="https://github.com/user-attachments/assets/8cd4d2cc-4e3a-40e9-b897-9d2f7b81e0c9" />
+
+**Selecting the option zero:**  
+
+<img width="363" height="178" alt="image" src="https://github.com/user-attachments/assets/60478b41-1e74-40f1-bcb9-241e7a616ad5" />
+
+
 ---
 
 Educational and practical project demonstrating clean architecture and design patterns in Python.
