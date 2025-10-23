@@ -196,6 +196,9 @@ Once the environment is active, run the main client file to see the **Factory Me
 ```bash
 python -m client.FactoryMethodClient
 ```
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
 
 ---
 
@@ -209,6 +212,7 @@ python -m client.FactoryMethodClient
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/)
 [![PyCharm](https://img.shields.io/badge/PyCharm-IDE-000000?logo=pycharm&logoColor=white)](https://www.jetbrains.com/pycharm/)
 [![VS Code](https://img.shields.io/badge/VS%20Code-Editor-007ACC?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
+[![PlantUML](https://img.shields.io/badge/PlantUML-Diagrams-F6921E?logo=plantuml&logoColor=black)](https://plantuml.com/)
 [![Markdown](https://img.shields.io/badge/Markdown-Docs-000000?logo=markdown)](https://www.markdownguide.org/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 
@@ -216,9 +220,9 @@ python -m client.FactoryMethodClient
 <a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
 </p>
 
+---  
 
-
-## 📷 Capture images of program from console (Terminal)
+## 📷 Capture images of program from console (Terminal PyCharm)
 
 <img width="566" height="279" alt="image" src="https://github.com/user-attachments/assets/db2895e0-87fc-4f43-bd54-4eaac88a700d" />  
 
