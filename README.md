@@ -3,6 +3,10 @@ This project implements the Factory Method design pattern in Python, demonstrati
 
 <img width="848" height="638" alt="image" src="https://github.com/user-attachments/assets/7af07b76-6caf-43d4-bdb3-37e984073cdb" />
 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
+
 ### Factory Method Pattern
 | To clearly represent the Factory Method pattern with the following classes:									|
 | :--- |
@@ -20,12 +24,19 @@ This project implements the Factory Method design pattern in Python, demonstrati
 |  🧍‍♂️ **FactoryMethodClient** represents the client that initiates the entire process.|
 |     **ILogger** is an interface for logging (implemented by Logger).|
 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
 
 ## 🚀 Objective
 To apply the Factory Method pattern to:
 * Create games in a flexible and decoupled manner.
 * Incorporate new functionalities (e.g., new game types) without modifying existing client code.
 * Practice good Git workflow (branching, Pull Requests, rebase, merges, logging).
+
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
 
 
 ## 🏗️ Project Structure
@@ -46,6 +57,9 @@ To apply the Factory Method pattern to:
         * `SolitaireGame.py` (Concrete Product)
     * `README.md`
 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
 
 ## 🧠 Core Features
     
@@ -57,6 +71,10 @@ To apply the Factory Method pattern to:
 | Timer/Duration Tracking | Records game duration and move counts. | 
 | Logger Integration | Logs activity and results to audit/factory_logs.txt. | 
 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
+
 ## 🧰 Technologies and Standards
 * Python 3.10+
 * Factory Method Design Pattern
@@ -64,6 +82,10 @@ To apply the Factory Method pattern to:
 * File handling (os, datetime modules)
 * Git and GitHub (Professional branching and PR workflow)
 ---
+
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
 
 ## 🔀 Git Development Workflow
  |No.|Command/Action|Action/Description |
@@ -91,6 +113,9 @@ To apply the Factory Method pattern to:
 |21|Git status|Verify that the working tree is clean.|
 |22|Git branch -d nueva-rama|Delete the nueva-rama branch locally (this only works if the branch has already been merged).|
 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>
 
 
 ## 🧱 Applied Design Principles
@@ -98,7 +123,9 @@ To apply the Factory Method pattern to:
 * __Single Responsability Principle (SRP):__ Each module and class has a clear, defined responsibility.
 * __Open/Closed Principle (OCP):__ The system is open for extension (new game types) but closed for modification (client code remains unchanged).
 
-
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
  
 ---
 
@@ -118,6 +145,10 @@ Make sure you have the following installed on your system:
 ```bash
 pip install poetry
 ```
+
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
 
 ---
 
@@ -152,6 +183,9 @@ poetry install
 ```bash
 poetry shell
 ```
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
 
 ---
 
@@ -205,7 +239,12 @@ python -m client.FactoryMethodClient
 <img width="363" height="178" alt="image" src="https://github.com/user-attachments/assets/60478b41-1e74-40f1-bcb9-241e7a616ad5" />
 
 
----
+---  
+
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
+
 
 Educational and practical project demonstrating clean architecture and design patterns in Python.
 
