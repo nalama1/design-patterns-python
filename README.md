@@ -242,19 +242,26 @@ python -m client.FactoryMethodClient
 
 <img width="363" height="178" alt="image" src="https://github.com/user-attachments/assets/60478b41-1e74-40f1-bcb9-241e7a616ad5" />
 
+ 
+<p align="right">
+<a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
+</p>  
 
 ---  
+## ⚙️ Board and Game Creation Process  
+Game Initialization and Creation Flow
+
+<img width="1350" height="900" alt="image" src="https://github.com/user-attachments/assets/dca106f4-3bb6-4c14-8c78-ef92e380cbd3" />  
+
 
 <p align="right">
 <a href="#factory-method-pattern-in-python">:arrow_up: Back to top</a>
 </p>  
 
+---  
+
 
 Educational and practical project demonstrating clean architecture and design patterns in Python.
-
-
-
-
 
 
 
