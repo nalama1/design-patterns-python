@@ -1,8 +1,35 @@
 [project]
 name = "githubmain"
 version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.13"
+description = "Factory Method pattern implementation with unit tests using pytest."
+authors = [
+    { name = "Nalama" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
 dependencies = [
-    "pytest>=8.4.2",
+    "pytest>=8.4.2,<9.0.0",
+]
+
+[tool.pytest.ini_options]
+# Folder where your tests are located
+testpaths = [
+    "tests",
+]
+
+# Show more detailed information
+#addopts = "-ra -q"
+addopts = "-v"
+
+# Ignore warnings that don't affect the test
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+# Optional: Names of the markers you use
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests",
 ]
